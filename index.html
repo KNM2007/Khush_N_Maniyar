@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Shadow Arena </title>
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body>
+        <div class="Game">
+            <div class="game-bg"></div> 
+            <div class="logo-container">
+                 <img src="title.png" alt="Shadow Arena" class="game-logo">
+            </div>
+            <div class="menu-buttons">
+                <button class="menu-btn play-btn">▶ PLAY</button>
+                <button class="menu-btn multiplayer-btn">👥 MULTIPLAYER</button>
+                <button class="menu-btn close-game-btn">✕ CLOSE</button>
+            </div>
+            <div class="controls-box">
+                <div class="control-section">
+                    <div class="keys">
+                        <div class="key empty"></div>
+                        <div class="key">W</div>
+                        <div class="key empty"></div>
+                        <div class="key">A</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                    </div>
+                    <span class="control-text">MOVE</span>
+                </div>
+                <div class="divider"></div>
+                <div class="control-section">
+                    <div class="mouse-icon">
+                        <div class="mouse-left"></div>
+                    </div>
+                    <span class="control-text">AIM / SHOOT</span>
+                </div>
+            </div>
+            <div class="top-icons">
+                <button class="icon-box" id="trophyBtn">🏆</button>
+                <button class="icon-box" id="helpBtn">?</button>
+            </div>
+            <div class="high-score-box">
+                <div class="skull">☠</div> 
+                <div class="score-text">
+                    <span class="score-label">BEST SCORE</span>
+                    <span class="score-value" id="bestScore">0</span>
+                </div>
+            </div>
+            <div class="map-screen" id="mapScreen">
+                <div class="map-popup">
+                    <div class="map-title">
+                    SELECT MAP TYPE
+                    </div>
+                    <button class="map-btn finite-btn">
+                        FINITE MAP
+                    </button>       
+                    <button class="map-btn infinite-btn">
+                        INFINITE MAP
+                    </button>
+                </div>
+            </div>
+            <div class="help-screen" id="helpScreen">
+                <div class="help-popup">
+                    <h2>HOW TO PLAY</h2>
+                    <div class="help-section">
+                        <h3>🎯 OBJECTIVE</h3>
+                        <p>Destroy all enemy rooms on the map. Each room contains one enemy. Clear every room to win!</p>
+                    </div>
+                    <div class="help-section">
+                        <h3>🕹️ CONTROLS</h3>
+                        <p><strong>W A S D</strong> — Move your player</p>
+                        <p><strong>Mouse</strong> — Aim</p>
+                        <p><strong>Left Click</strong> — Shoot</p>
+                    </div>
+                    <div class="help-section">
+                        <h3>💡 TIPS</h3>
+                        <p>• Enter a room to activate its enemy — they only shoot when you're inside!</p>
+                        <p>• Bullets <strong>bounce</strong> off walls — use angles to your advantage.</p>
+                        <p>• Collect <strong>medkits ➕</strong> outside rooms for +10 HP (spawns every 15s).</p>
+                        <p>• Clear a full column of rooms for a <strong>column clear bonus</strong>.</p>
+                    </div>
+                    <div class="help-section">
+                        <h3>👥 MULTIPLAYER</h3>
+                        <p><strong>P1:</strong> WASD + Mouse click to shoot</p>
+                        <p><strong>P2:</strong> Arrow keys + Spacebar to shoot</p>
+                        <p>Most enemies killed <strong>wins!</strong> Bullets don't hurt teammates.</p>
+                    </div>
+                    <button class="close-help" id="closeHelp">CLOSE</button>
+                </div>
+            </div>
+            <div class="leaderboard-screen" id="leaderboardScreen">
+                <div class="leaderboard-popup">
+                    <h2>🏆 LEADERBOARD</h2>
+                    <div id="leaderboardList" class="lb-list"></div>
+                    <button class="close-leaderboard" id="closeLeaderboard">CLOSE</button>
+                </div>
+            </div>
+        </div>  
+        <script src="script.js"></script>
+    </body>
+</html>
